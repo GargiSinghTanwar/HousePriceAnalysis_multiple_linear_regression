@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Jul 30 09:45:43 2022
-
-@author: GARGI
-"""
 
 import numpy as np
 from flask import Flask, request, jsonify, render_template
@@ -37,6 +31,5 @@ def predict():
     
         
     return render_template('index.html', prediction_text='Regression Model  has predicted price for given area is : {}'.format(prediction))
-
-
-app.run()
+if __name__ == "__main__":
+    app.run(debug=True)
